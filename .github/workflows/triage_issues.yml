@@ -11,10 +11,10 @@ jobs:
       shell: bash
       run: |
         echo "GH_REPO: $projectname"
-#    - name: add-new-issues-to-repository-based-project-column
-#      uses: docker://takanabe/github-actions-automate-projects:v0.0.1
-#      if: github.event_name == 'issues' && github.event.action == 'opened'
-#      env:
-#        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-#        GITHUB_PROJECT_URL: ${{env.projectname}}
-#        GITHUB_PROJECT_COLUMN_NAME: Inbox
+    - name: add-new-issues-to-repository-based-project-column
+      uses: docker://takanabe/github-actions-automate-projects:v0.0.1
+      if: github.event_name == 'issues' && github.event.action == 'opened'
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_PROJECT_URL: ${{env.projectname}}
+        GITHUB_PROJECT_COLUMN_NAME: Inbox
