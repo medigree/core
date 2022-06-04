@@ -3,11 +3,18 @@ on: [issues]
 jobs:
   github-actions-automate-projects:
     runs-on: ubuntu-latest
+    env:
+      projectname: https://github.com/${{ GITHUB_REPOSITORY }}/projects/1
+      
     steps:
+    - name: Any Name Bash Test Step
+      shell: bash
+      run: |
+        echo "GH_REPO: $projectname"
     - name: add-new-issues-to-repository-based-project-column
       uses: docker://takanabe/github-actions-automate-projects:v0.0.1
       if: github.event_name == 'issues' && github.event.action == 'opened'
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        GITHUB_PROJECT_URL: https://github.com/${{ github.event.repository.name }}/projects/1
+        GITHUB_PROJECT_URL: ${{env.projectname}}
         GITHUB_PROJECT_COLUMN_NAME: Inbox
