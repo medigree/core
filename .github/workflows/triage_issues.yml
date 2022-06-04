@@ -12,4 +12,4 @@ jobs:
         with:
           project: Issues and Change Requests
           column: Inbox
-#          repo-token: ${{ secrets.GITHUB_TOKEN }}
+          repo-token: ${{ secrets.GITHUB_TOKEN }}
