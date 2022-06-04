@@ -1,16 +1,19 @@
-name: Add Issues to Project
-
+name: Move new issues into Project Boards
 on:
   issues:
-    types: [opened]
-env:
-  GITHUB_API_TOKEN: ${{ secrets.MY_API_TOKEN }}
-
+    types: [ opened ]
 jobs:
-  add_to_project:
+  move-issue-to-repository-project-column:
+    name: Move issues to repository project column
     runs-on: ubuntu-latest
     steps:
-    - name: Assign new issues to the project
-      uses: tcassou/project-bot@1.0.0
-      with:
-        project_url: 'https://github.com/medigree/fhir-testing/projects/1'
+      - name: Move issue to 'To do' column if body has a mark 'issue:todo'
+        uses: fojia/action-move-issues-to-column@master
+        with:
+          project: 'Issues and Change Requests'
+          column: 'Inbox'
+#          owner: 'fojia'
+          repo: 'fhir-testing'
+          type: 'repo'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+#          marker: 'issue:todo'
