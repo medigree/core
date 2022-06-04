@@ -12,7 +12,7 @@ jobs:
         with:
           project: 'Issues and Change Requests'
           column: 'Inbox'
-#          owner: 'fojia'
+          owner: 'medigree'
           repo: 'fhir-testing'
           type: 'repo'
           github_token: ${{ secrets.GITHUB_TOKEN }}
