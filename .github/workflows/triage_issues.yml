@@ -4,7 +4,7 @@ jobs:
   github-actions-automate-projects:
     runs-on: ubuntu-latest
     env:
-      projectname: https://github.com/${{ GITHUB_REPOSITORY }}/projects/1
+      projectname: https://github.com/$GITHUB_REPOSITORY/projects/1
       
     steps:
     - name: Any Name Bash Test Step
