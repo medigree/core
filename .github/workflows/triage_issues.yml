@@ -1,4 +1,4 @@
-name: Add a new GitHub Project card linked to a GitHub issue to the specified project column
+name: Add new issues to Project column
 on: [issues]
 jobs:
   github-actions-automate-projects:
@@ -7,10 +7,6 @@ jobs:
       projectname: https://github.com/${{ github.repository }}/projects/1
       
     steps:
-    - name: Any Name Bash Test Step
-      shell: bash
-      run: |
-        echo "GH_REPO: $projectname"
     - name: add-new-issues-to-repository-based-project-column
       uses: docker://takanabe/github-actions-automate-projects:v0.0.1
       if: github.event_name == 'issues' && github.event.action == 'opened'
