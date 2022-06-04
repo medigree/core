@@ -1,8 +1,19 @@
 Instance: TS1
 InstanceOf: TestScript
+
 * url = "medigree.net/fhir/testing/testscript-1"
 * status = #active
 * name = "A test script"
+
+* extension[+]
+  * url = "http://hl7.org/fhir/5.0/StructureDefinition/extension-TestScript.scope"
+  * extension[+]
+    * url = "artifact"
+    * valueCanonical = Canonical(Req1)
+  * extension[+]
+    * url = "conformance"
+    * valueCodeableConcept = http://terminology.hl7.org/CodeSystem/testscript-scope-conformance-codes#required "Required"
+
 
 * test
   * name = "CapabilityStatement"
