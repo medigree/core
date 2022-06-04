@@ -1,16 +1,16 @@
-name: Move new issues into Triage
+name: Add Issues to Project
 
 on:
   issues:
     types: [opened]
+env:
+  GITHUB_API_TOKEN: ${{ secrets.MY_API_TOKEN }}
 
 jobs:
-  automate-project-columns:
+  add_to_project:
     runs-on: ubuntu-latest
-    permissions: write-all
     steps:
-      - uses: alex-page/github-project-automation-plus@v0.8.1
-        with:
-          project: Issues and Change Requests
-          column: Inbox
-          repo-token: ${{ secrets.GITHUB_TOKEN }}
+    - name: Assign new issues to the project
+      uses: tcassou/project-bot@1.0.0
+      with:
+        project_url: 'https://github.com/medigree/fhir-testing/projects/1'
