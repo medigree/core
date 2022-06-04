@@ -7,15 +7,15 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 
-id: my-ig
-canonical: http://example.com/fhir/example
-url: http://example.com/fhir/example
-name: ExampleIG
-title: "HL7 FHIR Implementation Guide: Example IG Release 1 - US Realm | STU1"
-description: Example IG exercises many of the fields in a SUSHI configuration.
+id: fhir-testing
+canonical: http://medigree.net/fhir/fhir-testing
+url: http://medigree.net/fhir/fhir-testing
+name: FHIR testing IG
+title: "HL7 FHIR Testing Implementation Guide"
+description: IG that describes testing resources and processes in FHIR.
 status: active
 license: CC0-1.0
-date: 2020-02-26
+date: 2022-02-26
 version: 1.0.0
 
 # Although fhirVersions is 0..* in the ImplementationGuide resource
@@ -38,7 +38,7 @@ releaseLabel: STU1
 # will be translated into IG.contact values.
 publisher:
   name: My Organization 
-  url: http://example.com/committees
+  url: http://medigree.net
   email: my-group@example.com
 
 # ContactDetail is required by the template.
@@ -128,10 +128,11 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 # file name extension.  Any subproperties that are valid filenames
 # with supported extensions (e.g., .md/.xml) will be treated as
 # sub-pages.
-#pages:
-#  index.md:
-#    title: Example Home
-#  implementation.xml:
+pages:
+  index.xml:
+    title: Home
+  testplan1.md:
+    title: Test Plan 1
 #  examples.xml:
 #    title: Examples Overview
 #    simpleExamples.xml:
@@ -173,8 +174,8 @@ jurisdiction: http://unstats.un.org/unsd/methods/m49/m49.htm#001 "World"
 # values, the value in the YAML should be a sequence/array. For a
 # partial list of allowed parameters see:
 # https://confluence.hl7.org/display/FHIR/Implementation+Guide+Parameters
-#parameters:
-#  excludettl: true
+parameters:
+  excludettl: true
 #  validation: [allow-any-extensions, no-broken-links]
 
 # The FSHOnly flag indicates if only FSH resources should be exported.
