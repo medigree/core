@@ -13,7 +13,7 @@ Canonical / permanent URL:
 ### Issues
 Issues and change requests are managed here:  
 
-Issues:  __https://github.com/openhie/fhir-ig-empty/issues__  
-Kanban board:  __https://github.com/openhie/fhir-ig-empty/projects/1__  
+Issues:  __[https://github.com/medigree/fhir-testing/issues](https://github.com/medigree/fhir-testing/issues)__  
+Kanban board:  __[https://github.com/medigree/fhir-testing/projects/1](https://github.com/medigree/fhir-testing/projects/1)__  
 
 ---
