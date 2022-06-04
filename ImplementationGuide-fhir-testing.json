@@ -1,40 +1,55 @@
 {
   "resourceType": "ImplementationGuide",
-  "id": "xxexample.fhir.uv.myig",
+  "id": "fhir-testing",
   "text": {
     "status": "extensions",
-    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>XXYourComputableMyIGNameHere</h2><p>The official URL for this implementation guide is: </p><pre>http://xxsomewhere.org/fhir/myig/ImplementationGuide/xxexample.fhir.uv.myig</pre><div><p>xxxA brief description of what this IG is about</p>\n</div></div>"
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>FHIRtestingIG</h2><p>The official URL for this implementation guide is: </p><pre>http://medigree.net/fhir/fhir-testing</pre><div><p>IG that describes testing resources and processes in FHIR.</p>\n</div></div>"
   },
-  "url": "http://xxsomewhere.org/fhir/myig/ImplementationGuide/xxexample.fhir.uv.myig",
-  "version": "0.1.0-test",
-  "name": "XXYourComputableMyIGNameHere",
-  "title": "xxYour User Friendly Name for MyIG Here",
-  "status": "draft",
-  "experimental": false,
-  "date": "2022-06-04T12:11:08+00:00",
-  "publisher": "xxxYour Work Group",
+  "url": "http://medigree.net/fhir/fhir-testing",
+  "version": "1.0.0",
+  "name": "FHIRtestingIG",
+  "title": "HL7 FHIR Testing Implementation Guide",
+  "status": "active",
+  "date": "2022-02-26",
+  "publisher": "My Organization",
   "contact": [
     {
+      "name": "My Organization",
       "telecom": [
         {
           "system": "url",
-          "value": "http://xxhl7.org/Special/committees/[something]"
+          "value": "http://medigree.net"
+        },
+        {
+          "system": "email",
+          "value": "my-group@example.com"
+        }
+      ]
+    },
+    {
+      "name": "Bob Smith",
+      "telecom": [
+        {
+          "system": "email",
+          "value": "bobsmith@example.com",
+          "use": "work"
         }
       ]
     }
   ],
-  "description": "xxxA brief description of what this IG is about ",
+  "description": "IG that describes testing resources and processes in FHIR.",
   "jurisdiction": [
     {
       "coding": [
         {
           "system": "http://unstats.un.org/unsd/methods/m49/m49.htm",
-          "code": "001"
+          "code": "001",
+          "display": "World"
         }
       ]
     }
   ],
-  "packageId": "xxexample.fhir.uv.myig",
+  "packageId": "fhir-testing",
   "license": "CC0-1.0",
   "fhirVersion": [
     "4.0.1"
@@ -57,7 +72,7 @@
           },
           {
             "url": "value",
-            "valueString": "2019+"
+            "valueString": "2021+"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -70,7 +85,7 @@
           },
           {
             "url": "value",
-            "valueString": "CI Build"
+            "valueString": "STU1"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -79,24 +94,11 @@
         "extension": [
           {
             "url": "code",
-            "valueString": "path-binary"
+            "valueString": "excludettl"
           },
           {
             "url": "value",
-            "valueString": "input\\cql"
-          }
-        ],
-        "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
-      },
-      {
-        "extension": [
-          {
-            "url": "code",
-            "valueString": "path-liquid"
-          },
-          {
-            "url": "value",
-            "valueString": "templates\\liquid"
+            "valueString": "true"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -200,7 +202,7 @@
           },
           {
             "url": "value",
-            "valueString": "http://xxsomewhere.org/fhir/myig/history.html"
+            "valueString": "history.html"
           }
         ],
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
@@ -375,6 +377,21 @@
         "url": "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter"
       }
     ],
+    "resource": [
+      {
+        "extension": [
+          {
+            "url": "http://hl7.org/fhir/tools/StructureDefinition/resource-information",
+            "valueString": "TestScript"
+          }
+        ],
+        "reference": {
+          "reference": "TestScript/TS1"
+        },
+        "name": "TS1",
+        "exampleBoolean": true
+      }
+    ],
     "page": {
       "nameUrl": "toc.html",
       "title": "Table of Contents",
@@ -382,25 +399,17 @@
       "page": [
         {
           "nameUrl": "index.html",
-          "title": "MyIG Home Page",
+          "title": "Home",
           "generation": "html"
         },
         {
-          "nameUrl": "changes.html",
-          "title": "IG Change History",
-          "generation": "html"
+          "nameUrl": "testplan1.html",
+          "title": "Test Plan 1",
+          "generation": "markdown"
         }
       ]
     },
     "parameter": [
-      {
-        "code": "path-resource",
-        "value": "input\\history"
-      },
-      {
-        "code": "path-resource",
-        "value": "input\\scenarios"
-      },
       {
         "code": "path-resource",
         "value": "input/capabilities"
@@ -432,6 +441,10 @@
       {
         "code": "path-resource",
         "value": "input/vocabulary"
+      },
+      {
+        "code": "path-resource",
+        "value": "input/maps"
       },
       {
         "code": "path-resource",

@@ -1,0 +1,465 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta content="text/html;charset=utf-8" http-equiv="Content-Type"/>
+    <title>FHIR-TESTING\Test Plan 1 - FHIR v4.0.1</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link href="fhir.css" rel="stylesheet"/>
+
+    <!-- Bootstrap core CSS -->
+    <link href="assets/css/bootstrap-fhir.css" rel="stylesheet"/>
+
+    <!-- Project extras -->
+    <link href="assets/css/project.css" rel="stylesheet"/>
+    <link href="assets/css/pygments-manni.css" rel="stylesheet"/>
+    <link href="assets/css/jquery-ui.css" rel="stylesheet"/>
+  	<link href="assets/css/prism.css" rel="stylesheet" />
+    <!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/openhie.css" rel="stylesheet"/>
+<!-- Placeholder for child template CSS declarations -->
+<link href="assets/css/colors.css" rel="stylesheet"/>
+
+    <script type="text/javascript" src="fhir-table-scripts.js"> </script>
+<!--
+  Questionnaire:
+-->
+    <link href="assets/css/lforms.min.css" rel="stylesheet"/>
+
+
+
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif]-->
+
+    <!-- Favicons -->
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"2"}
+    h3,h4,h5,h6{--heading-prefix:"2"}</style>
+    <div id="segment-header" class="segment">  <!-- segment-header -->
+      <div class="container">  <!-- container -->
+        <!-- Placeholder for child template header declarations -->
+
+<!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a id="project-logo" no-external="true" href="http://hl7.eu">
+            <img height="71" alt="Project home" src="assets/images/home.png"/>
+          </a>
+        </div>
+
+<!-- Right logo - for example the FHIR logo -->
+<!-- Make sure you have authorization to use the FHIR logo -->
+        <div id="family-nav">
+          <a id="family-logo" no-external="true" href="http://hl7.org/fhir"><img height="70" alt="FHIR website" src="assets/images/fire.png"/> </a>
+        </div>
+
+<!-- search icon - if you want -->
+<!--
+        <div id="hl7-search">
+          <a id="hl7-search-lnk" no-external="true" href="http://hl7.org/fhir/search.cfm"><img alt="Search FHIR" src="assets/images/search.png"/></a>
+        </div>
+-->
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">HL7 FHIR Testing Implementation Guide</span><br/>1.0.0 - STU1</p>
+        </div>
+      </div> <!-- /container -->
+    </div>  <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">  <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">  <!-- container -->
+        <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+          <!--status-bar-->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" class="navbar-toggle" data-toggle="collapse" type="button">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a class="navbar-brand hidden" href="http://hl7.org/fhir/R4/index.html">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul
+	xmlns="http://www.w3.org/1999/xhtml" class="nav navbar-nav">
+	<li>
+		<a href="index.html">IG Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+<!--
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret"></b>
+		</a>
+
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Description<b class="caret"></b>
+		</a>
+
+	</li>
+-->
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Specifications<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="artifacts.html">Artifact Index</a>
+			</li>
+		</ul>
+	</li>
+</ul>      
+            </div>  <!-- /.nav-collapse -->
+          </div>  <!-- /.container -->
+        </nav>  <!-- /.navbar -->
+      <!-- /HEADER CONTENT -->
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-navbar -->
+    <!--status-bar-->
+    
+    <div id="segment-breadcrumb" class="segment">  <!-- segment-breadcrumb -->
+      <div class="container">  <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href='toc.html'><b>Table of Contents</b></a></li><li><b>Test Plan 1</b></li>
+          
+        </ul>
+      </div>  <!-- /container -->
+    </div>  <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">  <!-- segment-content -->
+      <div class="container">  <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+  <!--ReleaseHeader--><p id="publish-box">HL7 FHIR Testing Implementation Guide - Local Development build (v1.0.0). See the <a href="http://medigree.net/fhir/fhir-testing/history.html">Directory of published versions</a></p><!--EndReleaseHeader-->
+  <h2>Test Plan 1</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p><!-- white space is critical inside of capture --></p>
+<div class="markdown-toc">
+<ul id="markdown-toc">
+  <li><a href="#environments" id="markdown-toc-environments">Environments:</a></li>
+  <li><a href="#setup" id="markdown-toc-setup">Setup</a></li>
+  <li><a href="#test" id="markdown-toc-test">Test</a></li>
+  <li><a href="#teardown" id="markdown-toc-teardown">Teardown</a></li>
+</ul>
+
+</div>
+<p>The test plan contains all the</p>
+
+<h3 id="environments">Environments:</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@host1 = http://test.fhir.org/r4/
+@host2 = http://hapi.fhir.org/baseR4/
+@host3 = https://server.fire.ly/r4/
+</code></pre></div></div>
+<p>Let’s start with the FHIR reference server</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>@host=``
+</code></pre></div></div>
+
+<h3 id="setup">Setup</h3>
+
+<h4 id="1-create-patients">1. Create Patients:</h4>
+<p>Pne patient 
+Patient/1545788
+Patient/2081525</p>
+
+<h4 id="2-create-medicationstatements-and-a-list">2. Create MedicationStatements and a List:</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>PUT /List/p1023meds
+Content-Type: application/fhir+json
+Accept: application/fhir+json
+
+{"resourceType":"List","id":"p1023meds","status":"current","mode":"snapshot","title":"Meds List","code":{"coding":[{"system":"http://hl7.org/fhir/list-example-use-codes","code":"meds"}]},"subject":{"reference":"Patient/1023"},"date":"2021-11-02T15:06:10-06:00","entry":[{"item":{"reference":"MedicationStatement/1"}},{"item":{"reference":"MedicationStatement/2"}},{"item":{"reference":"MedicationStatement/3"}},{"item":{"reference":"MedicationStatement/4"}},{"item":{"reference":"MedicationStatement/5"}},{"item":{"reference":"MedicationStatement/6"}},{"item":{"reference":"MedicationStatement/7"}}]}
+
+</code></pre></div></div>
+
+<h3 id="test">Test</h3>
+
+<h4 id="0-capabilitystatement">0. CapabilityStatement</h4>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /CapabilityStatement
+</code></pre></div></div>
+
+<h4 id="1-search-all-patients">1. Search all Patients</h4>
+<p>Get all Patients in a server</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Patient
+</code></pre></div></div>
+<h5 id="11-when-there-are-no-patients">1.1. When there are no patients</h5>
+<h5 id="12-when-there-is-one-patient">1.2. When there is one patient</h5>
+<h5 id="13-when-there-are-patients">1.3. When there are patients</h5>
+
+<h4 id="2-get-a-specific-patient">2. GET a specific patient</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Patient/1545788
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h4 id="3-search-a-patient-by-its-_id">3. Search a patient by its _id</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Patient?_id=1545788
+</code></pre></div></div>
+
+<h4 id="4-search-a-patient-by-a-logical-identifier">4. Search a patient by a logical identifier</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Patient?identifier=urn:trinhcongminh|123456 
+</code></pre></div></div>
+
+<h4 id="5-get-patients-older-than-21-years-old">5. Get patients older than 21 years old</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Patient?birthdate=lt2010-11-03
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h4 id="6-server-wide-searches---patient-and-practitioner">6. Server-wide searches - Patient and Practitioner</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /?name=r&amp;_type=Practitioner,Patient
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h4 id="7-post-search">7. POST search</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST /Patient/_search HTTP/1.1
+Accept: application/fhir+json
+Content-Type: application/x-www-form-urlencoded
+
+_id=2081525
+</code></pre></div></div>
+
+<h4 id="8-search-non-existing-parameter">8. Search non-existing parameter</h4>
+<blockquote>
+  <p>Will not work on HAPI, will be ignored on test.fhir.org</p>
+</blockquote>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Patient?marital-status=http://terminology.hl7.org/CodeSystem/v3-MaritalStatus|U
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h4 id="9-return-a-json-or-xml-response">9. Return a JSON or XML response</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Patient/1545788?_format=json
+</code></pre></div></div>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Patient/1545788?_format=_xml
+</code></pre></div></div>
+
+<h4 id="10-return-only-summary">10. Return only summary</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Patient?_summary=true
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h4 id="11-return-only-certain-elements">11. Return only certain elements</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Patient?_elements=name,active,link
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h4 id="12-sort-search-results">12. Sort search results</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Patient?_sort=-birthdate,name
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h4 id="13-return-more-than-the-default-10-results">13. Return more than the default 10 results</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /?name=r&amp;_type=Practitioner,Patient&amp;_count=20
+</code></pre></div></div>
+
+<h4 id="14text-search">14.Text search</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /MedicationStatement?_text=%22John+Mark%22+NEAR+%22Gliclazide%22
+Accept: application/fhir+json
+Content-Type: application/x-www-form-urlencoded
+</code></pre></div></div>
+
+<h4 id="15-get-from-a-list">15. Get from a List</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code></code></pre></div></div>
+
+<h5 id="151-search-for-the-list">15.1. Search for the list:</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /List/p1023meds
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h4 id="152-get-all-items-from-a-list">15.2. Get all items from a list</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /MedicationStatement?_list=p1023meds
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h4 id="16-referenced-resource---all-observations-for-a-given-patient">16. Referenced resource - all Observations for a given patient</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Observation?subject=Patient/1024
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h4 id="17-get-all-medicationstatements-for-a-given-patient-given-their-identifier">17. Get all MedicationStatements for a given patient given their identifier</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /MedicationStatement?subject.identifier=http://trilliumbridge.eu/fhir/demos/eumfh/patient_id|EUR01P0004
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h4 id="171-get-all-observations-for-a-given-patient-given-their-identifier">17.1. Get all Observations for a given patient given their identifier</h4>
+<p>HAPI</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Patient?identifier=urn:trinhcongminh|123456 
+</code></pre></div></div>
+
+<h4 id="18-reverse-chaining---all-patients-that-have-a-medrequest-with-intentorder">18. Reverse Chaining - All Patients that have a MedRequest with intent=order</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Patient?_has:MedicationRequest:subject:intent=order&amp;_total=accurate
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h4 id="19-get-all-medrequests-and-include-the-referenced-patients">19. get all MedRequests and <strong>include</strong> the referenced Patients</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /MedicationRequest?_include=MedicationRequest:patient
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h4 id="20_revinclude--get-a-patient-and-include-the-observations-that-reference-it">20._revinclude : Get a Patient and include the observations that reference it</h4>
+<p>using _revinclude</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Patient?_id=5&amp;_revinclude=Observation:subject
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h4 id="21-search-contained">21. search contained</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Medication?_contained=true&amp;_containedType=container
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h4 id="22-search-type-operators">22. Search type operators</h4>
+
+<h5 id="221-search-patient-by-gender">22.1 Search Patient by gender</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Patient?gender=male
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h5 id="222-search-patient-by-gender-not">22.2 Search Patient by gender (NOT)</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Patient?gender:not=male
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h5 id="223-search-patients-above-65">22.3 Search patients above 65</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Patient?birthdate=lt1956-11-03
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h5 id="224-search-or">22.4 Search OR</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /Patient?gender=male,unknown&amp;_sort=gender
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h4 id="225-search-composite">22.5 Search: Composite</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>GET /DiagnosticReport?result.code-value-quantity=http://loinc.org|2823-3$gt5.4|http://unitsofmeasure.org|mmol/L
+Accept: application/fhir+json
+</code></pre></div></div>
+
+<h4 id="23-graphql">23. GraphQL</h4>
+
+<h4 id="231-graphql">23.1. GraphQL</h4>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST /Patient/$graphql HTTP/1.1
+Accept: application/fhir+json
+Content-Type: application/json
+
+{"query":" { \n   Patient(id: 1023) { id, active } \n }","variables":{}}
+</code></pre></div></div>
+
+<h5 id="232-graphql">23.2 GraphQL</h5>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>POST /Observation/11/$graphql HTTP/1.1
+Accept: application/fhir+json
+Content-Type: application/json
+
+{"query":"  { id subject { reference resource(type : Patient) { gender name {given family}} }  code {coding {system code} } }","variables":{}}
+</code></pre></div></div>
+
+<h3 id="teardown">Teardown</h3>
+
+
+
+</div>
+        </div>  <!-- /inner-wrapper -->
+      </div>  <!-- /row -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-content -->
+
+  <script type="text/javascript" src="assets/js/jquery.js"> </script>     <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script type="text/javascript" src="assets/js/jquery-ui.min.js"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <a name="bottom"> </a>
+  <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
+    <div class="container">  <!-- container -->
+
+           
+      <div class="inner-wrapper">
+        <p>
+          IG &#169; 2021+ <a style="color: #81BEF7" href="http://medigree.net">My Organization</a>.  Package fhir-testing#1.0.0 based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R4/">FHIR 4.0.1</a>. Generated <span title="Sat, Jun 4, 2022 14:11+0000">2022-06-04</span>
+          <br/>
+          <span style="color: #FFFF77">
+                      Links: <a style="color: #81BEF7" href="toc.html">Table of Contents</a> |
+                 <a style="color: #81BEF7" href="qa.html">QA Report</a> |
+                 
+                 <a style="color: #81BEF7" target="_blank" href="http://medigree.net/fhir/fhir-testing/history.html">Version History</a> |
+                 <a style="color: #81BEF7" rel="license" href="http://hl7.org/fhir/R4/license.html"><img style="border-style: none;" alt="CC-BY" src="assets/images/cc-by.png" height="17"/></a> |
+                 <!--<a style="color: #81BEF7" href="todo.html">Search</a> | --> 
+
+
+          </span>
+        </p>
+      </div>  <!-- /inner-wrapper -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">  <!-- segment-post-footer -->
+    <div class="container">  <!-- container -->
+    </div>  <!-- /container -->
+  </div>  <!-- /segment-post-footer -->
+  
+  <!-- JS and analytics only. -->
+  <!-- Bootstrap core JavaScript
+  ================================================== -->
+  <!-- Placed at the end of the document so the pages load faster -->
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"> </script>
+  <script type="text/javascript" src="assets/js/respond.min.js"> </script>
+  <script type="text/javascript" src="assets/js/anchor.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard.min.js"> </script>
+  <script type="text/javascript" src="assets/js/clipboard-btn.js"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- feedback form - Google forms -->
+<!-- v0.1, 2021-01-09 -->
+
+
+
+<!-- / feedback form  -->
+
+  <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>
+

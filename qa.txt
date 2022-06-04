@@ -1,12 +1,21 @@
-﻿XXYourComputableMyIGNameHere : Validation Results
+﻿FHIRtestingIG : Validation Results
 =========================================
 
-err = 1, warn = 0, info = 0
+err = 5, warn = 3, info = 0
 IG Publisher Version: 1.1.121
-Generated Sat Jun 04 12:11:20 UTC 2022. FHIR version 4.0.1 for xxexample.fhir.uv.myig#0.1.0-test (canonical = http://xxsomewhere.org/fhir/myig)
- Build Errors : 0 / 0 / 0
- /github/workspace/input/myig : 1 / 0 / 1
+Generated Sat Jun 04 14:11:39 UTC 2022. FHIR version 4.0.1 for fhir-testing#1.0.0 (canonical = http://medigree.net/fhir/fhir-testing)
+ Build Errors : 0 / 2 / 0
+ /github/workspace/fsh-generated/resources/ImplementationGuide-fhir-testing : 2 / 0 / 1
+ /github/workspace/fsh-generated/resources/TestScript-TS1 : 3 / 1 / 1
 </table>
 == n/a ==
-== input/myig.xml ==
-ERROR: ImplementationGuide/xxexample.fhir.uv.myig: ImplementationGuide.definition: ImplementationGuide.definition.resource: minimum required = 1, but only found 0 (from http://hl7.org/fhir/StructureDefinition/ImplementationGuide)
+WARNING: ImplementationGuide.url: The canonical URL for an Implementation Guide must point directly to the implementation guide resource, not to the Implementation Guide as a whole
+WARNING: Unable to find ImplementationGuide.definition.resource.description for the resource TestScript/TS1.  Descriptions are strongly encouraged if they cannot be inferred from the resource to allow proper population of the artifact list.
+== fsh-generated/resources/ImplementationGuide-fhir-testing.json ==
+ERROR: ImplementationGuide.where(url = 'http://medigree.net/fhir/fhir-testing'): Conformance resource /github/workspace/fsh-generated/resources/ImplementationGuide-fhir-testing.json - the canonical URL (http://medigree.net/fhir/fhir-testing/ImplementationGuide/fhir-testing) does not match the URL (http://medigree.net/fhir/fhir-testing)
+ERROR: /github/workspace/fsh-generated/resources/ImplementationGuide-fhir-testing: URL Mismatch http://medigree.net/fhir/fhir-testing/ImplementationGuide/fhir-testing vs http://medigree.net/fhir/fhir-testing
+== fsh-generated/resources/TestScript-TS1.json ==
+WARNING: TestScript/TS1: TestScript: tst-0: 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Rule 'Name should be usable as an identifier for the module by machine processing applications such as code generation' Failed
+ERROR: TestScript/TS1: TestScript.url: Canonical URLs must be absolute URLs if they are not fragment references (medigree.net/fhir/testing/testscript-1)
+ERROR: TestScript/TS1: TestScript.test[0].action[0].operation: tst-7: 'Setup operation SHALL contain either sourceId or targetId or params or url.' Rule 'Setup operation SHALL contain either sourceId or targetId or params or url.' Failed
+ERROR: TestScript/TS1: TestScript.test[0].action[0].operation: tst-8: 'Test operation SHALL contain either sourceId or targetId or params or url.' Rule 'Test operation SHALL contain either sourceId or targetId or params or url.' Failed

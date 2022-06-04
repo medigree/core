@@ -1,33 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <ImplementationGuide xmlns="http://hl7.org/fhir">
-  <id value="xxexample.fhir.uv.myig"/>
+  <id value="fhir-testing"/>
   <text>
-    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>XXYourComputableMyIGNameHere</h2><p>The official URL for this implementation guide is: </p><pre>http://xxsomewhere.org/fhir/myig/ImplementationGuide/xxexample.fhir.uv.myig</pre><div><p>xxxA brief description of what this IG is about</p>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>FHIRtestingIG</h2><p>The official URL for this implementation guide is: </p><pre>http://medigree.net/fhir/fhir-testing</pre><div><p>IG that describes testing resources and processes in FHIR.</p>
 </div></div>
   </text>
-  <url value="http://xxsomewhere.org/fhir/myig/ImplementationGuide/xxexample.fhir.uv.myig"/>
-  <version value="0.1.0-test"/>
-  <name value="XXYourComputableMyIGNameHere"/>
-  <title value="xxYour User Friendly Name for MyIG Here"/>
-  <status value="draft"/>
-  <experimental value="false"/>
-  <date value="2022-06-04T12:11:08+00:00"/>
-  <publisher value="xxxYour Work Group"/>
+  <url value="http://medigree.net/fhir/fhir-testing"/>
+  <version value="1.0.0"/>
+  <name value="FHIRtestingIG"/>
+  <title value="HL7 FHIR Testing Implementation Guide"/>
+  <status value="active"/>
+  <date value="2022-02-26"/>
+  <publisher value="My Organization"/>
   <contact>
+    <name value="My Organization"/>
     <telecom>
       <system value="url"/>
-      <value value="http://xxhl7.org/Special/committees/[something]"/>
+      <value value="http://medigree.net"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="my-group@example.com"/>
     </telecom>
   </contact>
-  <description value="xxxA brief description of what this IG is about "/>
+  <contact>
+    <name value="Bob Smith"/>
+    <telecom>
+      <system value="email"/>
+      <value value="bobsmith@example.com"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="IG that describes testing resources and processes in FHIR."/>
   <jurisdiction>
     <coding>
       <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
       <code value="001"/>
+      <display value="World"/>
     </coding>
   </jurisdiction>
-  <packageId value="xxexample.fhir.uv.myig"/>
+  <packageId value="fhir-testing"/>
   <license value="CC0-1.0"/>
   <fhirVersion value="4.0.1"/>
   <dependsOn id="hl7tx">
@@ -41,7 +54,7 @@
         <valueString value="copyrightyear"/>
       </extension>
       <extension url="value">
-        <valueString value="2019+"/>
+        <valueString value="2021+"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -49,23 +62,15 @@
         <valueString value="releaselabel"/>
       </extension>
       <extension url="value">
-        <valueString value="CI Build"/>
+        <valueString value="STU1"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
       <extension url="code">
-        <valueString value="path-binary"/>
+        <valueString value="excludettl"/>
       </extension>
       <extension url="value">
-        <valueString value="input\cql"/>
-      </extension>
-    </extension>
-    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
-      <extension url="code">
-        <valueString value="path-liquid"/>
-      </extension>
-      <extension url="value">
-        <valueString value="templates\liquid"/>
+        <valueString value="true"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -129,7 +134,7 @@
         <valueString value="path-history"/>
       </extension>
       <extension url="value">
-        <valueString value="http://xxsomewhere.org/fhir/myig/history.html"/>
+        <valueString value="history.html"/>
       </extension>
     </extension>
     <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
@@ -236,29 +241,31 @@
         <valueString value="true"/>
       </extension>
     </extension>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="TestScript"/>
+      </extension>
+      <reference>
+        <reference value="TestScript/TS1"/>
+      </reference>
+      <name value="TS1"/>
+      <exampleBoolean value="true"/>
+    </resource>
     <page>
       <nameUrl value="toc.html"/>
       <title value="Table of Contents"/>
       <generation value="html"/>
       <page>
         <nameUrl value="index.html"/>
-        <title value="MyIG Home Page"/>
+        <title value="Home"/>
         <generation value="html"/>
       </page>
       <page>
-        <nameUrl value="changes.html"/>
-        <title value="IG Change History"/>
-        <generation value="html"/>
+        <nameUrl value="testplan1.html"/>
+        <title value="Test Plan 1"/>
+        <generation value="markdown"/>
       </page>
     </page>
-    <parameter>
-      <code value="path-resource"/>
-      <value value="input\history"/>
-    </parameter>
-    <parameter>
-      <code value="path-resource"/>
-      <value value="input\scenarios"/>
-    </parameter>
     <parameter>
       <code value="path-resource"/>
       <value value="input/capabilities"/>
@@ -290,6 +297,10 @@
     <parameter>
       <code value="path-resource"/>
       <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
     </parameter>
     <parameter>
       <code value="path-resource"/>

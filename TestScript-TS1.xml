@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<TestScript xmlns="http://hl7.org/fhir">
+  <id value="TS1"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "TS1" </p></div><p><b>url</b>: <code>medigree.net/fhir/testing/testscript-1</code></p><p><b>version</b>: 1.0.0</p><p><b>name</b>: A test script</p><p><b>status</b>: active</p><p><b>date</b>: 2022-06-04 02:11:26+0000</p><p><b>publisher</b>: My Organization</p><p><b>contact</b>: My Organization: <a href="http://medigree.net">http://medigree.net</a>,<a href="mailto:my-group@example.com">my-group@example.com</a>, Bob Smith: <a href="mailto:bobsmith@example.com">bobsmith@example.com</a></p><p><b>jurisdiction</b>: World <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (m49.htm#001)</span></p><blockquote><p><b>test</b></p><p><b>name</b>: CapabilityStatement</p><p><b>description</b>: Get a server's CapabilityStatement and validate response.</p><blockquote><p><b>action</b></p><h3>Operations</h3><table class="grid"><tr><td>-</td><td><b>Type</b></td><td><b>Description</b></td><td><b>Accept</b></td><td><b>EncodeRequestUrl</b></td><td><b>Params</b></td><td><b>Url</b></td></tr><tr><td>*</td><td>Read (Details: http://terminology.hl7.org/CodeSystem/testscript-operation-codes code read = 'Read', stated as 'null')</td><td>Get the server's metadata</td><td>xml</td><td>true</td><td>?_format=xml</td><td>http://test.fhir.org/r4/metadata</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class="grid"><tr><td>-</td><td><b>Description</b></td><td><b>Response</b></td><td><b>WarningOnly</b></td></tr><tr><td>*</td><td>Confirm that the returned HTTP status is 200(OK).</td><td>okay</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class="grid"><tr><td>-</td><td><b>Description</b></td><td><b>ContentType</b></td><td><b>WarningOnly</b></td></tr><tr><td>*</td><td>Confirm that the returned format is XML.</td><td>xml</td><td>false</td></tr></table></blockquote><blockquote><p><b>action</b></p><h3>Asserts</h3><table class="grid"><tr><td>-</td><td><b>Description</b></td><td><b>Resource</b></td><td><b>WarningOnly</b></td></tr><tr><td>*</td><td>Confirm that the returned resource type is CapabilityStatement.</td><td>Bundle</td><td>false</td></tr></table></blockquote></blockquote></div>
+  </text>
+  <url value="medigree.net/fhir/testing/testscript-1"/>
+  <version value="1.0.0"/>
+  <name value="A test script"/>
+  <status value="active"/>
+  <date value="2022-06-04T14:11:26+00:00"/>
+  <publisher value="My Organization"/>
+  <contact>
+    <name value="My Organization"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://medigree.net"/>
+    </telecom>
+    <telecom>
+      <system value="email"/>
+      <value value="my-group@example.com"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Bob Smith"/>
+    <telecom>
+      <system value="email"/>
+      <value value="bobsmith@example.com"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="001"/>
+      <display value="World"/>
+    </coding>
+  </jurisdiction>
+  <test>
+    <name value="CapabilityStatement"/>
+    <description value="Get a server's CapabilityStatement and validate response."/>
+    <action>
+      <operation>
+        <type>
+          <system value="http://terminology.hl7.org/CodeSystem/testscript-operation-codes"/>
+          <code value="read"/>
+        </type>
+        <description value="Get the server's metadata"/>
+        <accept value="xml"/>
+        <encodeRequestUrl value="true"/>
+        <params value="?_format=xml"/>
+        <url value="http://test.fhir.org/r4/metadata"/>
+      </operation>
+    </action>
+    <action>
+      <assert>
+        <description value="Confirm that the returned HTTP status is 200(OK)."/>
+        <response value="okay"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+    <action>
+      <assert>
+        <description value="Confirm that the returned format is XML."/>
+        <contentType value="xml"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+    <action>
+      <assert>
+        <description value="Confirm that the returned resource type is CapabilityStatement."/>
+        <resource value="Bundle"/>
+        <warningOnly value="false"/>
+      </assert>
+    </action>
+  </test>
+</TestScript>

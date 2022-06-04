@@ -1,9 +1,16 @@
 [
   {
-    "id": "xxexample.fhir.uv.myig",
+    "id": "fhir-testing",
     "type": "ImplementationGuide",
-    "url": "http://xxsomewhere.org/fhir/myig/ImplementationGuide/xxexample.fhir.uv.myig",
-    "version": "0.1.0-test",
-    "name": "XXYourComputableMyIGNameHere"
+    "url": "http://medigree.net/fhir/fhir-testing",
+    "version": "1.0.0",
+    "name": "FHIRtestingIG"
+  },
+  {
+    "id": "TS1",
+    "type": "TestScript",
+    "url": "medigree.net/fhir/testing/testscript-1",
+    "version": "1.0.0",
+    "name": "A test script"
   }
 ]
