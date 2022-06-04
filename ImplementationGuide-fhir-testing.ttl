@@ -362,6 +362,19 @@
        fhir:Element.extension [
          fhir:index 0;
          fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://medigree.net/fhir/fhir-testing/StructureDefinition/Requirement>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/Requirement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Requirement" ];
+       fhir:ImplementationGuide.definition.resource.exampleBoolean [ fhir:value "false"^^xsd:boolean ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
          fhir:Extension.valueString [ fhir:value "TestScript" ]
        ];
        fhir:ImplementationGuide.definition.resource.reference [

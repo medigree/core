@@ -7,6 +7,13 @@
     "name": "FHIRtestingIG"
   },
   {
+    "id": "Requirement",
+    "type": "StructureDefinition",
+    "url": "http://medigree.net/fhir/fhir-testing/StructureDefinition/Requirement",
+    "version": "1.0.0",
+    "name": "Requirement"
+  },
+  {
     "id": "TS1",
     "type": "TestScript",
     "url": "medigree.net/fhir/testing/testscript-1",
