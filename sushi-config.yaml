@@ -7,7 +7,7 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 
-id: fhir-testing
+id: medigree.fhir.fhir-testing
 canonical: http://medigree.net/fhir/fhir-testing
 url: http://medigree.net/fhir/fhir-testing
 name: FHIR testing IG
