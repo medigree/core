@@ -1,0 +1,14 @@
+{
+    "package-id" : "medigree.fhir.fhir-testing",
+    "title" : "Testing", 
+    "category" : "something",
+    "introduction" : "Just a demo",
+    "version" : "1.0.0",
+    "desc" : "First stable release",
+    "mode": "milestone",    
+    "path" : "http://medigree.net/fhir/fhir-testing/1.0.0",
+    "ci-build": "https//build.fhir.org/ig/medigree/fhir-testing",    
+    "first": true,
+    "status" : "release",
+    "sequence" : "Releases"
+  }
