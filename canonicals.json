@@ -1,23 +1,23 @@
 [
   {
-    "id": "fhir-testing",
-    "type": "ImplementationGuide",
-    "url": "http://medigree.net/fhir/fhir-testing",
-    "version": "1.0.0",
-    "name": "FHIRtestingIG"
+    "id" : "medigree.fhir.fhir-testing",
+    "type" : "ImplementationGuide",
+    "url" : "http://medigree.net/fhir/fhir-testing",
+    "version" : "1.0.0",
+    "name" : "FHIRtestingIG"
   },
   {
-    "id": "Requirement",
-    "type": "StructureDefinition",
-    "url": "http://medigree.net/fhir/fhir-testing/StructureDefinition/Requirement",
-    "version": "1.0.0",
-    "name": "Requirement"
+    "id" : "Requirement",
+    "type" : "StructureDefinition",
+    "url" : "http://medigree.net/fhir/fhir-testing/StructureDefinition/Requirement",
+    "version" : "1.0.0",
+    "name" : "Requirement"
   },
   {
-    "id": "TS1",
-    "type": "TestScript",
-    "url": "medigree.net/fhir/testing/testscript-1",
-    "version": "1.0.0",
-    "name": "A test script"
+    "id" : "TS1",
+    "type" : "TestScript",
+    "url" : "medigree.net/fhir/testing/testscript-1",
+    "version" : "1.0.0",
+    "name" : "A test script"
   }
 ]
