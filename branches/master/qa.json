@@ -1,12 +1,12 @@
 {
-  "url": "http://medigree.net/fhir/fhir-testing",
-  "name": "FHIRtestingIG",
-  "package-id": "fhir-testing",
-  "ig-ver": "1.0.0",
-  "date": "Sat, 04 Jun, 2022 14:33:15 +0000",
-  "errs": 5,
-  "warnings": 5,
-  "hints": 1,
-  "version": "4.0.1",
-  "tool": "5.0.0-snapshot1 (3)"
+  "url" : "http://medigree.net/fhir/fhir-testing",
+  "name" : "FHIRtestingIG",
+  "package-id" : "medigree.fhir.fhir-testing",
+  "ig-ver" : "1.0.0",
+  "date" : "Wed, 15 Mar, 2023 23:07:02 +0000",
+  "errs" : 6,
+  "warnings" : 9,
+  "hints" : 1,
+  "version" : "4.0.1",
+  "tool" : "5.0.0-draft-final (3)"
 }
