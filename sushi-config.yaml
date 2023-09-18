@@ -7,9 +7,9 @@
 # ╰────────────────────────────────────────────────────────────────────────────────────────────────╯
 
 
-id: medigree.fhir.fhir-testing
-canonical: http://medigree.net/fhir/fhir-testing
-url: http://medigree.net/fhir/fhir-testing
+id: medigree.fhir.core
+canonical: http://medigree.net/fhir/core
+url: http://medigree.net/fhir/core
 name: FHIR testing IG
 title: "HL7 FHIR Testing Implementation Guide"
 description: IG that describes testing resources and processes in FHIR.
